@@ -17,7 +17,7 @@ const Home = () => {
 
             {/* Hero con parallax simple */}
             <div
-                className="relative w-full h-screen bg-fixed bg-center bg-cover"
+                className="relative w-full h-screen bg-center bg-cover md:bg-fixed"
                 style={{ backgroundImage: 'url(/back.png)' }}
             >
                 <div className="absolute inset-0 bg-[#a5732db5] mix-blend-multiply"></div>
