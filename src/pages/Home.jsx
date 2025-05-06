@@ -18,7 +18,7 @@ const Home = () => {
             {/* Hero con parallax simple */}
             <div
                 className="relative w-full h-screen bg-fixed bg-center bg-cover"
-                style={{ backgroundImage: 'url(https://icdn.tradew.com/file/202110/1575078/png/8044771.png)' }}
+                style={{ backgroundImage: 'url(/back.png)' }}
             >
                 <div className="absolute inset-0 bg-[#a5732db5] mix-blend-multiply"></div>
 
