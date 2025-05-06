@@ -40,7 +40,11 @@ const Navbar = () => {
     const navContent = (
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
             <Link to="/" className="text-white text-xl font-bold tracking-wide">
-                Aeternum
+                <img
+                    src="/logo-aet.png"
+                    alt="Logo"
+                    className="h-8 drop-shadow-lg filter brightness-0 invert"
+                />
             </Link>
 
             {/* Íconos a la derecha */}

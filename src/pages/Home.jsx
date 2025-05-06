@@ -26,9 +26,9 @@ const Home = () => {
                     <img
                         src="/logo-aet.png"
                         alt="Logo"
-                        className="h-72 object-cover drop-shadow-lg filter brightness-0 invert"
+                        className=" object-cover drop-shadow-lg filter brightness-0 invert"
                     />
-                    <p className="mt-4 text-lg sm:text-2xl font-light min-h-[3rem]">
+                    <p className="mt-4 text-lg sm:text-2xl font-serif min-h-[3rem]">
                         {slogan}
                         <span className="border-r-2 border-white animate-pulse ml-1" />
                     </p>
