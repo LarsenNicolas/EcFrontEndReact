@@ -24,13 +24,10 @@ const Home = () => {
 
                 <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
                     <img
-                        src="logo.jpeg"
+                        src="/logo-aet.png"
                         alt="Logo"
-                        className="h-32 md:h-52 mb-6 drop-shadow-lg animate-float"
+                        className="h-72 object-cover drop-shadow-lg filter brightness-0 invert"
                     />
-                    <h1 className="text-5xl sm:text-7xl font-serif font-bold drop-shadow-md">
-                        Aeternum
-                    </h1>
                     <p className="mt-4 text-lg sm:text-2xl font-light min-h-[3rem]">
                         {slogan}
                         <span className="border-r-2 border-white animate-pulse ml-1" />
