@@ -41,7 +41,7 @@ const Home = () => {
                     key={category.id}
                     className={`flex flex-col ${
                         i % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-                    } items-center justify-center overflow-hidden py-12`}
+                    } items-center justify-center overflow-hidden`}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.3 }}
