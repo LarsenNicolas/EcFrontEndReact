@@ -49,8 +49,9 @@ const Navbar = () => {
 
             {/* Íconos a la derecha */}
             <div className="flex gap-5 items-center">
-                <Link to="/products" className="relative group">
+                <Link to="/products" className="flex relative group">
                     <TagIcon className="w-6 h-6 text-white transition-transform group-hover:scale-110 duration-300" />
+                    <p className="px-2 text-white font-serif">Productos</p>
                 </Link>
 
                 <Link to="/cart" className="relative group">
