@@ -17,38 +17,45 @@ const Home = () => {
 
             {/* Hero con parallax simple */}
             <div
-                className="relative w-full h-screen bg-center bg-cover md:bg-fixed"
-                style={{ backgroundImage: 'url(/products/collar-mariana1.jpeg)' }}
+                className="relative w-full h-screen bg-center bg-cover"
+                style={{backgroundImage: 'url(/products/collar-mariana1.jpeg)'}}
             >
+                <div
+                    className="absolute top-1/3 left-1/2 transform -translate-y-1/2 z-10 text-black text-center px-4">
+                    {/* Logo fijo */}
+                    <div className="flex justify-center">
+                        <img
+                            src="/logo-aet.png"
+                            alt="Logo"
+                            className="object-contain drop-shadow-lg w-24 sm:w-32 md:w-48 lg:w-56"
+                        />
+                    </div>
 
-
-                <div className="relative z-10 flex flex-col items-center justify-center h-full text-black text-center px-4">
-                    <img
-                        src="/logo-aet.png"
-                        alt="Logo"
-                        className=" object-cover drop-shadow-lg "
-                    />
-                    <p className="mt-4 text-lg sm:text-2xl font-serif min-h-[3rem]">
-                        {slogan}
-                        <span className="border-r-2 border-black animate-pulse ml-1" />
-                    </p>
+                    {/* Slogan typewriter */}
+                    <div className="mt-4 min-h-[3rem] w-full sm:w-80 md:w-96 lg:w-[30rem] mx-auto">
+                        <p className="text-base sm:text-sm md:text-xl lg:text-3xl font-serif">
+                            {slogan}
+                            <span className="border-r-2 border-black animate-pulse ml-1"/>
+                        </p>
+                    </div>
                 </div>
             </div>
 
+
             {categories.map((category, i) => (
                 <Link to={`/products/${category.id}`}>
-                <motion.section
-                    key={category.id}
-                    className={`flex flex-col ${
-                        i % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
-                    } items-center justify-center overflow-hidden`}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                    variants={fadeUp}
-                >
-                    {/* Imagen */}
-                    <div className="w-full md:w-1/2 overflow-hidden group relative">
+                    <motion.section
+                        key={category.id}
+                        className={`flex flex-col ${
+                            i % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
+                        } items-center justify-center overflow-hidden`}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{once: true, amount: 0.3}}
+                        variants={fadeUp}
+                    >
+                        {/* Imagen */}
+                        <div className="w-full md:w-1/2 overflow-hidden group relative">
                             <Parallax speed={-10}>
                                 <img
                                     src={category.image}
