@@ -38,7 +38,7 @@ const products = [
         color: [1],
         size: [0],
         category: 1,
-        image: ["/products/anillo-3.jpeg" , "/products/Anillo-Leonor.jpeg", "products/Anillo-Leonor1.jpeg" ],
+        image: ["/products/anillo-3.jpeg" , "/products/Anillo-Leonor.jpeg", "/products/Anillo-Leonor1.jpeg" ],
         stock: 1
     },
     {
@@ -136,7 +136,7 @@ const products = [
         color: [0],
         size: [0],
         category: 1,
-        image: ["/products/Anillo-Wave.jpeg" , "/products/Anillo-Wave1.jpeg" , "/products/Anillo-Wave1.jpeg"],
+        image: ["/products/Anillo-Wave.jpeg" , "/products/Anillo-Wave1.jpeg" , "/products/Anillo-Wave2.jpeg"],
         stock: 1
     },
     {

@@ -2,12 +2,13 @@ import { useParams } from "react-router-dom";
 import products from "../../mock/products";
 import { useState } from "react";
 import { useCartStore } from "../store/useCartStore";
-import Button from "../components/Button.jsx";
+import ButtonDet from "../components/Button-Product-Detail.jsx";
 import { toast } from "react-toastify";
 import { CheckCircle } from "lucide-react";
 import sizeList from "../../mock/size.js";
 import color from "../../mock/color.js";
 import qualitiesList from "../../mock/qualities.js";
+import Separator from "../components/Separator.jsx";
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -144,34 +145,43 @@ const ProductDetail = () => {
                                             key={id}
                                             className="px-3 py-1 text-sm rounded-full bg-[#e8e2db] text-[#7a5b2d] font-medium"
                                         >
-                      {q?.name}
-                    </span>
+                                            {q?.name}
+                                        </span>
                                     );
                                 })}
                             </div>
                         )}
+
+                        {/* BLOQUE PRECIO */}
+                        <Separator />
+
+                        <div
+                            className="rounded-xl px-6 flex items-center justify-center sm:justify-start w-full sm:w-auto">
+                            <p className="text-3xl font-bold text-primary">
+                                ${formattedPrice}
+                            </p>
+                        </div>
+                        <Separator />
+
                     </div>
 
                     {/* PRECIO + CANTIDAD + BOTÓN */}
-                    <div className="mt-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 sm:gap-6">
-                        <p className="text-3xl font-bold text-primary mb-6 sm:mb-0">
-                            ${formattedPrice}
-                        </p>
-
-                        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+                    <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                        {/* BLOQUE CANTIDAD + BOTÓN */}
+                        <div className="flex w-full gap-3">
                             <input
                                 type="number"
                                 min={1}
                                 value={quantity}
                                 onChange={(e) => setQuantity(Number(e.target.value))}
-                                className="w-full sm:w-20 px-3 py-2 border border-gray-300 rounded-md text-center text-lg"
+                                className="w-[30%] sm:w-20 px-3 h-12 py-3 border border-gray-300 rounded-md text-center text-lg"
                             />
-                            <Button
+                            <ButtonDet
                                 onClick={handleAddToCart}
-                                className="w-full sm:w-auto px-6 py-3 text-lg"
+                                className="w-[70%] sm:w-auto px-6 py-3"
                             >
                                 Agregar al carrito
-                            </Button>
+                            </ButtonDet>
                         </div>
                     </div>
                 </div>
@@ -184,10 +194,7 @@ const ProductDetail = () => {
                         Cuidados del producto
                     </h2>
                     <p className="text-gray-700 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                        facilisi. Suspendisse potenti. Ut ac ipsum vel dui volutpat varius.
-                        Sed dignissim, lectus non hendrerit pretium, odio urna convallis
-                        augue, a fermentum justo nisl at risus.
+                        Cuidados: Así como tu brillo interior se cuida con amor, tus joyas también necesitan delicadeza. Evitá el contacto con agua, perfumes o químicos para proteger el baño en oro y mantener su resplandor. Guardalas en un lugar seco, preferentemente en su estuche, para evitar rayaduras.
                     </p>
                 </div>
             )}
