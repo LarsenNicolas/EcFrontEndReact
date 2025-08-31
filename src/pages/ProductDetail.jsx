@@ -28,6 +28,7 @@ const ProductDetail = () => {
     }
 
     const handleAddToCart = () => {
+        if (product.stock === 0) return;
         addToCart(product, quantity);
         toast.success(`Agregaste ${product.name} a tu carrito.`, {
             icon: <CheckCircle className="text-[#a5732db5]" />,
@@ -117,7 +118,7 @@ const ProductDetail = () => {
                         )}
 
                         <div className="space-y-2 text-gray-700 text-base">
-                            {product.size.length > 0 && (
+                            {product.color.length > 0 && (
                                 <p>
                                     <span className="font-semibold">Color:</span>{" "}
                                     {product.color
@@ -162,26 +163,37 @@ const ProductDetail = () => {
                             </p>
                         </div>
                         <Separator />
-
                     </div>
 
                     {/* PRECIO + CANTIDAD + BOTÓN */}
                     <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                         {/* BLOQUE CANTIDAD + BOTÓN */}
                         <div className="flex w-full gap-3">
-                            <input
-                                type="number"
-                                min={1}
-                                value={quantity}
-                                onChange={(e) => setQuantity(Number(e.target.value))}
-                                className="w-[30%] sm:w-20 px-3 h-12 py-3 border border-gray-300 rounded-md text-center text-lg"
-                            />
-                            <ButtonDet
-                                onClick={handleAddToCart}
-                                className="w-[70%] sm:w-auto px-6 py-3"
-                            >
-                                Agregar al carrito
-                            </ButtonDet>
+                            {product.stock === 0 && (
+                                <p className="text-red-600 font-semibold text-lg mt-2">
+                                    Producto fuera de stock.
+                                </p>
+                            )}
+                            {product.stock > 0 && (
+                                <>
+                                <input
+                                    type="number"
+                                    min={1}
+                                    value={quantity}
+                                    onChange={(e) => setQuantity(Number(e.target.value))}
+                                    className="w-[30%] sm:w-20 px-3 h-12 py-3 border border-gray-300 rounded-md text-center text-lg"
+                                    disabled={product.stock === 0}
+                                />
+
+                                <ButtonDet
+                                    onClick={handleAddToCart}
+                                    className="w-[70%] sm:w-auto px-6 py-3"
+                                    disabled={product.stock === 0}
+                                >
+                                    {product.stock === 0 ? "Sin stock" : "Agregar al carrito"}
+                                </ButtonDet>
+                                </>
+                            )}
                         </div>
                     </div>
                 </div>

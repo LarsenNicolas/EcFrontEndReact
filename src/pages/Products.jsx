@@ -94,14 +94,23 @@ const Products = () => {
                             <img
                                 src={product.image[0]}
                                 alt={`Imagen de ${product.name}`}
-                                className="w-full h-full object-cover rounded-md transition-all duration-300 brightness-100 md:brightness-50 md:group-hover:brightness-100"
+                                className={`w-full h-full object-cover rounded-md transition-all duration-300 
+                                ${product.stock === 0 ? "brightness-10" : "brightness-100 md:brightness-50 md:group-hover:brightness-100"}`}
                             />
 
+                            {/* Overlay de información */}
                             <div className="absolute bottom-0 left-0 w-full bg-[#a5732db5] bg-opacity-60 text-white px-4 py-4">
                                 <h2 className="text-xl font-semibold truncate">{product.name}</h2>
                                 <p className="text-lg font-medium">{formatPrice(product.price)}</p>
                                 <p className="text-sm mt-1 truncate">{product.description}</p>
                             </div>
+
+                            {/* Overlay "Sin stock" */}
+                            {product.stock === 0 && (
+                                <div className="absolute inset-0 bg-opacity-40 flex items-center justify-center text-white text-2xl font-bold">
+                                    Sin stock
+                                </div>
+                            )}
                         </div>
                     </Link>
                 ))}
