@@ -2,6 +2,7 @@ import { useCartStore } from "../store/useCartStore";
 import { Trash2 } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 import Button from "../components/Button.jsx";
+import {formatPrice} from "../utils/formatPrice.js";
 
 const Cart = () => {
     const cart = useCartStore((state) => state.cart);
@@ -67,7 +68,7 @@ const Cart = () => {
 
                     <div className="mt-8 text-right">
                         <p className="text-xl font-bold text-gray-800">
-                            Total: ${total.toFixed(2)}
+                            Total: ${formatPrice(total)}
                         </p>
                         <Button
                             onClick={handleCheckout}

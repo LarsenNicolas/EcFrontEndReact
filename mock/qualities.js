@@ -10,6 +10,10 @@ const qualities = [
     {
         id: 3,
         name: "Plata 925",
+    },
+    {
+        id: 4,
+        name: "Bañado en oro 18K",
     }
 ];
 

@@ -14,7 +14,19 @@ const size = [
     {
         id: 3,
         name: "18",
-    }
+    },
+    {
+        id: 4,
+        name: "6",
+    },
+    {
+        id: 5,
+        name: "7",
+    },
+    {
+        id: 6,
+        name: "8",
+    },
 ];
 
 export default size;

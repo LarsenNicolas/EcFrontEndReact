@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useCartStore } from "../store/useCartStore";
 import { useNavigate } from 'react-router-dom';
+import {formatPrice} from "../utils/formatPrice.js";
 
 const Checkout = () => {
     const cart = useCartStore((state) => state.cart);
@@ -173,7 +174,7 @@ const Checkout = () => {
 
                         <div className="text-right">
                             <div className="mt-4">
-                                <p className="text-lg font-semibold">Total: ${total.toFixed(2)}</p>
+                                <p className="text-lg font-semibold">Total: {formatPrice(total)}</p>
                             </div>
                             <button
                                 type="submit"

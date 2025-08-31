@@ -1,0 +1,1 @@
+const cuidados = "Cuidados: Así como tu brillo interior se cuida con amor, tus joyas también necesitan delicadeza. Evitá el contacto con agua, perfumes o químicos para proteger el baño en oro y mantener su resplandor. Guardalas en un lugar seco, preferentemente en su estuche, para evitar rayaduras.

@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import {formatPrice} from "../src/utils/formatPrice.js";
 
 export default async function handler(req, res) {
     if (req.method !== 'POST') {
@@ -29,7 +30,7 @@ export default async function handler(req, res) {
                 <p><strong>Cliente:</strong> ${name}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>WhatsApp:</strong> ${whatsapp}</p>
-                <p><strong>Total:</strong> $${total.toFixed(2)}</p>
+                <p><strong>Total:</strong> ${formatPrice(total)}</p>
                 <p><strong>Carrito:</strong></p>
                 <ul>${itemsHtml}</ul>
                 <p>Podés contactarlo para coordinar el envío o confirmar el pago.</p>
@@ -59,7 +60,7 @@ export default async function handler(req, res) {
                   </ul>
                 </div>
         
-                <p style="font-size: 18px;"><strong>Total:</strong> $${total.toFixed(2)}</p>
+                <p style="font-size: 18px;"><strong>Total:</strong> ${formatPrice(total)}</p>
         
                 <p style="margin-top: 24px;">En breve nos pondremos en contacto para coordinar el envío 📦.</p>
                 <p style="margin-top: 24px;">Gracias por confiar en nosotros,</p>

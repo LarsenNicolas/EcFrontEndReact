@@ -3,6 +3,7 @@ import products from "../../mock/products";
 import { useEffect, useState, useMemo } from "react";
 import { toast } from "react-toastify";
 import categoriesData from "../../mock/categories";
+import {formatPrice} from "../utils/formatPrice.js";
 
 
 const Products = () => {
@@ -91,14 +92,14 @@ const Products = () => {
                     <Link key={product.id} to={`/product/${product.id}`}>
                         <div className="relative w-full h-[32rem] rounded-md overflow-hidden shadow-lg group">
                             <img
-                                src={product.image}
+                                src={product.image[0]}
                                 alt={`Imagen de ${product.name}`}
                                 className="w-full h-full object-cover rounded-md transition-all duration-300 brightness-100 md:brightness-50 md:group-hover:brightness-100"
                             />
 
                             <div className="absolute bottom-0 left-0 w-full bg-[#a5732db5] bg-opacity-60 text-white px-4 py-4">
                                 <h2 className="text-xl font-semibold truncate">{product.name}</h2>
-                                <p className="text-lg font-medium">${product.price}</p>
+                                <p className="text-lg font-medium">{formatPrice(product.price)}</p>
                                 <p className="text-sm mt-1 truncate">{product.description}</p>
                             </div>
                         </div>
