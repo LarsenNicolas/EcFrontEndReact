@@ -223,6 +223,48 @@ const products = [
         image: ["/products/collar-2.jpeg"],
         stock: 0
     },
+    {
+        id: 17,
+        name: "Collar Luna",
+        description: "Elegancia minimalista con un toque místico.",
+        longDescription: "Un diseño que une lo simple y lo eterno. Su forma circular representa la plenitud, mientras que la luna partida al costado evoca la transformación. Ideal para quienes encuentran belleza en cada etapa de su camino y desean llevar siempre un recordatorio de su luz interior.",
+        care: false,
+        qualities: [1,2,4,5],
+        price: 25380,
+        color: [0],
+        size: [0],
+        category: 2,
+        image: ["/products/collar-luna.jpeg", "/products/collar-luna1.jpeg"],
+        stock: 1
+    },
+    {
+        id: 18,
+        name: "Collar Mariana",
+        description: "Frescura, color y libertad.",
+        longDescription: "Un diseño que une lo simple y lo eterno. Su forma circular representa la plenitud, mientras que la luna partida al costado evoca la transformación. Ideal para quienes encuentran belleza en cada etapa de su camino y desean llevar siempre un recordatorio de su luz interior.",
+        care: false,
+        qualities: [1,2,4,5],
+        price: 18300,
+        color: [0],
+        size: [0],
+        category: 2,
+        image: ["/products/collar-mariana1.jpeg", "/products/collar-mariana2.jpeg", "/products/collar-mariana3.jpeg",],
+        stock: 1
+    },
+    {
+        id: 19,
+        name: "Collar Rosa",
+        description: "Amor, belleza y fortaleza",
+        longDescription: "Un diseño que une lo simple y lo eterno. Su forma circular representa la plenitud, mientras que la luna partida al costado evoca la transformación. Ideal para quienes encuentran belleza en cada etapa de su camino y desean llevar siempre un recordatorio de su luz interior.",
+        care: false,
+        qualities: [1,2,4,5],
+        price: 12500,
+        color: [0],
+        size: [0],
+        category: 2,
+        image: ["/products/collar-rosa1.jpeg", "/products/collar-rosa2.jpeg", "/products/collar-rosa3.jpeg", "/products/collar-rosa4.jpeg"],
+        stock: 1
+    },
 
 ];
 

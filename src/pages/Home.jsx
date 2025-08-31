@@ -18,19 +18,19 @@ const Home = () => {
             {/* Hero con parallax simple */}
             <div
                 className="relative w-full h-screen bg-center bg-cover md:bg-fixed"
-                style={{ backgroundImage: 'url(/back.png)' }}
+                style={{ backgroundImage: 'url(/products/collar-mariana1.jpeg)' }}
             >
-                <div className="absolute inset-0 bg-[#a5732db5] mix-blend-multiply"></div>
 
-                <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+
+                <div className="relative z-10 flex flex-col items-center justify-center h-full text-black text-center px-4">
                     <img
                         src="/logo-aet.png"
                         alt="Logo"
-                        className=" object-cover drop-shadow-lg filter brightness-0 invert"
+                        className=" object-cover drop-shadow-lg "
                     />
                     <p className="mt-4 text-lg sm:text-2xl font-serif min-h-[3rem]">
                         {slogan}
-                        <span className="border-r-2 border-white animate-pulse ml-1" />
+                        <span className="border-r-2 border-black animate-pulse ml-1" />
                     </p>
                 </div>
             </div>

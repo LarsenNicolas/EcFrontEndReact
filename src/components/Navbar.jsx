@@ -39,25 +39,25 @@ const Navbar = () => {
 
     const navContent = (
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-            <Link to="/" className="text-white text-xl font-bold tracking-wide">
+            <Link to="/" className="text-black text-xl font-bold tracking-wide">
                 <img
                     src="/logo-aet.png"
                     alt="Logo"
-                    className="h-8 drop-shadow-lg filter brightness-0 invert"
+                    className="h-8 drop-shadow-lg "
                 />
             </Link>
 
             {/* Íconos a la derecha */}
             <div className="flex gap-5 items-center">
                 <Link to="/products" className="flex relative group">
-                    <TagIcon className="w-6 h-6 text-white transition-transform group-hover:scale-110 duration-300" />
-                    <p className="px-2 text-white font-serif">Productos</p>
+                    <TagIcon className="w-6 h-6 text-black transition-transform group-hover:scale-110 duration-300" />
+                    <p className="px-2 text-black font-serif">Productos</p>
                 </Link>
 
                 <Link to="/cart" className="relative group">
-                    <ShoppingCartIcon className="w-7 h-7 text-white transition-transform group-hover:scale-110 duration-300" />
+                    <ShoppingCartIcon className="w-7 h-7 text-black transition-transform group-hover:scale-110 duration-300" />
                     {totalItems > 0 && (
-                        <span className="absolute -top-2 -right-2 bg-pink-500 text-white text-[10px] font-semibold rounded-full w-5 h-5 flex items-center justify-center">
+                        <span className="absolute -top-2 -right-2 bg-pink-500 text-black text-[10px] font-semibold rounded-full w-5 h-5 flex items-center justify-center">
                         {totalItems}
                     </span>
                     )}

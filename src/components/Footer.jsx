@@ -2,7 +2,7 @@ import { Instagram } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="w-full bg-[#a5732db5] text-white py-8 px-6">
+        <footer className="w-full bg-[#a5732db5] text-black py-8 px-6">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
 
                 {/* Información de la tienda */}
@@ -19,7 +19,7 @@ export default function Footer() {
                 {/* Contacto */}
                 <div>
                     <h3 className="text-xl font-bold font-serif mb-3">Contacto</h3>
-                    <p className="text-sm">✉️ Email: aeternumaccesoriosventas@gmail.com</p>
+                    <p className="text-sm">aeternumaccesoriosventas@gmail.com</p>
                 </div>
 
                 {/* Redes sociales */}

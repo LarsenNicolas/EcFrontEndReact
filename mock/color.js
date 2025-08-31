@@ -9,7 +9,7 @@ const color = [
     },
     {
         id: 2,
-        name: "b",
+        name: "Blanco",
     },
     {
         id: 3,

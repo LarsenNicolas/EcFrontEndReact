@@ -14,7 +14,11 @@ const qualities = [
     {
         id: 4,
         name: "Bañado en oro 18K",
-    }
+    },
+    {
+        id: 5,
+        name: "Acero inoxidable",
+    },
 ];
 
 export default qualities;
