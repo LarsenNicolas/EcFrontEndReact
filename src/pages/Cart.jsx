@@ -32,7 +32,7 @@ const Cart = () => {
                             className="flex flex-col sm:flex-row items-center gap-6 bg-white rounded-xl shadow-md p-4"
                         >
                             <img
-                                src={item.product.image}
+                                src={item.product.image[0]}
                                 alt={item.product.name}
                                 className="w-full sm:w-32 h-32 object-cover rounded-md"
                             />
@@ -48,10 +48,10 @@ const Cart = () => {
                                         Cantidad: <strong>{item.quantity}</strong>
                                     </span>
                                     <span className="text-gray-700">
-                                        Precio unitario: ${item.product.price}
+                                        Precio unitario: {formatPrice(item.product.price)}
                                     </span>
                                     <span className="font-semibold text-primary">
-                                        Subtotal: ${item.product.price * item.quantity}
+                                        Subtotal: {formatPrice(item.product.price * item.quantity)}
                                     </span>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@ const Cart = () => {
 
                     <div className="mt-8 text-right">
                         <p className="text-xl font-bold text-gray-800">
-                            Total: ${formatPrice(total)}
+                            Total: {formatPrice(total)}
                         </p>
                         <Button
                             onClick={handleCheckout}

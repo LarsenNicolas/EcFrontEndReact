@@ -1,4 +1,4 @@
-const size = [
+const color = [
     {
         id: 0,
         name: "Dorado"
@@ -17,4 +17,4 @@ const size = [
     }
 ];
 
-export default size;
+export default color;
